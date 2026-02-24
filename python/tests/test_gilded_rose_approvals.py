@@ -1,5 +1,9 @@
 import io
 import sys
+from pathlib import Path
+
+# Add parent directory to path so we can import texttest_fixture
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from approvaltests import verify
 from texttest_fixture import main
